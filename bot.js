@@ -32,7 +32,7 @@ bot.on("message", async (ctx) => {
   }
 
   if (photo) {
-    url = await ctx.telegram.getFileLink(photo[3].file_id);
+    url = await ctx.telegram.getFileLink(photo[photo.length - 1].file_id);
   }
 
   if (url) {
